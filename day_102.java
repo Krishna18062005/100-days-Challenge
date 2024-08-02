@@ -14,3 +14,18 @@ class Codechef
          }
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Replace X - Divisible by 4
+		String inp=new Scanner(System.in).next();
+		int d=inp.charAt(inp.length()-2)-'0';
+		for(int i=0;i<10;i++){
+		    if((d*10+i)%4==0){
+		        System.out.print(inp.replace("X",i+" "));
+		    }
+		}
+
+	}
+}

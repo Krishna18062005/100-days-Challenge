@@ -43,3 +43,30 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Toogle Bits in Range 
+		Scanner sc=new Scanner(System.in);
+		String binum=Integer.toBinaryString(sc.nextInt());
+		int i=sc.nextInt();
+	//	System.out.print(binum);
+		int j=sc.nextInt();
+		if(j>binum.length()){
+		    int n=j-binum.length();
+		    for(int k=0;k<n;k++){
+		        binum='0'+binum;
+		    }
+		}
+		String ans=binum.substring(0,i-1);
+		for(int l=i-1;l<j;l++){
+		    if(binum.charAt(l)=='0') ans+='1';
+		    else{
+		        ans+='0';
+		    }
+		}
+		ans=ans+binum.substring(j);
+		System.out.println(Integer.valueOf(ans,2));
+	}
+}

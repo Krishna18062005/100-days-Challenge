@@ -18,3 +18,28 @@ public class Solution {
 		return ans;
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Search Substring & Print Words
+		Scanner sc=new Scanner(System.in);
+		String[] ar=sc.nextLine().split(" ");
+		int n=sc.nextInt();
+		for(int i=0;i<n;i++){
+		    String key=sc.next();
+		    boolean p=false;
+		    for(String st:ar){
+		        if(st.contains(key)){
+		            p=true;
+		            System.out.print(st+" ");
+		        }
+		    }
+		    
+		        System.out.println((p==false)?-1:"");
+		    
+		}
+		
+
+	}
+}

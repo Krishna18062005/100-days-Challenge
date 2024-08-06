@@ -60,3 +60,25 @@ class Solution {
         
     }
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Convert String to Matrix
+		Scanner sc=new Scanner(System.in);
+		String st=sc.nextLine().replace(" ","*");
+		int m=sc.nextInt();
+		if(st.length()%m!=0){
+		    for(int i=0;i<st.length()%m;i++){
+		        st+='#';
+		    }
+		}
+		int k=st.length()-1;
+		for(int i=0;i<st.length()/m;i++){
+		    for(int j=m;j>0;j--){
+		        System.out.print(st.charAt(k--)+" ");
+		    }System.out.println();
+		}
+
+	}
+}

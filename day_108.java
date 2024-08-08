@@ -43,3 +43,31 @@ class Codechef
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		///Sum - Fibonacci Pair
+		Scanner sc=new Scanner(System.in);
+		int req=sc.nextInt();
+		sc.close();
+		LinkedHashSet<Integer> set=new LinkedHashSet<>();
+		set.add(0);
+		int a=0;
+		int b=1;
+		while(a+b<=req){
+		    int c=a+b;
+		    a=b;
+		    b=c;
+		    set.add(c);
+		}
+		for(int i:set){
+		    if(set.contains(req-i)){
+		        System.out.print(i+" "+(req-i));
+		        return;
+		    }
+		}
+		System.out.print(-1);
+
+	}
+}

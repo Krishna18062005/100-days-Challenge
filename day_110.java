@@ -39,3 +39,20 @@ public class Hello {
 	    return st.substring(a)+st.substring(0,a);
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Top to Bottom - Triangle Pattern 
+		int n=new Scanner(System.in).nextInt();
+		
+		for(int i=1;i<=n;i++){
+		    System.out.print(i+" ");
+		    int c=i;
+		    for(int j=n;j>i;j--){
+		        System.out.print((c=c+j)+" ");
+		    }System.out.println();
+		}
+
+	}
+}

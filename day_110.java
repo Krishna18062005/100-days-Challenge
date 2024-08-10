@@ -21,8 +21,9 @@ public class Hello {
 		for(String st:ar){
 		    
 		c0++;
-		System.out.println(rot(st,c0,num));
-         if(c0==num) c0=0;
+		
+		System.out.println(rot(st,c0%st.length(),num));
+        
 }
 	}
 	static String rot(String st,int a,int le){

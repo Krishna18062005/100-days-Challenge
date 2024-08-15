@@ -19,3 +19,21 @@ class Codechef
 
 	}
 }
+import java.util.* ;
+import java.io.*; 
+import java.util.ArrayList;
+
+public class Solution {
+	public static ArrayList<Integer> containsNumber(int n, ArrayList<Integer> arr) {
+		// Write your code here.
+		ArrayList<Integer> ans=new ArrayList<>();
+		for(int i=0;i<n;i++){
+			int k=(arr.get(i));
+			
+			if((k+"").contains("1")&&(k+"").contains("2")&&(k+"").contains("3")) ans.add(k);
+		}
+		Collections.sort(ans);
+		if(ans.isEmpty()) ans.add(-1);
+		return ans;
+	}
+}

@@ -69,3 +69,37 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Consecutive Count && Binary
+		String num=Integer.toBinaryString(new Scanner(System.in).nextInt());
+		ArrayList<Integer> a=new ArrayList<>();
+		int c=0;
+		for(int i=0;i<num.length();i++){
+		    if(num.charAt(i)=='0') c++;
+		    if(c!=0&&num.charAt(i)!='0'){ a.add(c);c=0;}
+		}
+		if(num.charAt(num.length()-1)=='0') a.add(c);
+		int p=-1;
+		String ip="";
+		boolean pr=false;
+		for(int i=0;i<num.length();i++){
+		    //int k=a.get(p);
+		    if(num.charAt(i)=='0'){
+		        if(!pr){
+		            p=p+1;
+		        }
+		       pr=true; 
+		      ip+=a.get(p);  
+		    }
+		    else{
+		        pr=false;
+		        ip+=num.charAt(i);
+		    }
+		 
+		}
+        System.out.print(Long.toBinaryString(Long.valueOf(ip)));
+	}
+}

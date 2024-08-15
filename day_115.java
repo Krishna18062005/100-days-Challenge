@@ -37,3 +37,35 @@ public class Solution {
 		return ans;
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Missing Numbers & Ranges
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] ar=new int[n];
+		for(int i=0;i<n;i++){
+		    ar[i]=sc.nextInt();
+		}
+		Arrays.sort(ar);
+		String ans="";
+		if(ar[0]==1){
+		    ans+="0,";
+		}
+		else if(ar[0]!=0){
+		    ans+="0-"+(ar[0]-1)+",";
+		}
+		for(int i=0;i+1<n;i++){
+		   
+		    if(ar[i]+2==ar[i+1]){
+		        ans+=(ar[i]+1+",");
+		    }
+		    else if(ar[i+1]-ar[i]>2){
+		        ans+=(ar[i]+1+"-"+(ar[i+1]-1)+",");
+		    }
+		}
+		System.out.print(ans.substring(0,ans.length()-1));
+
+	}
+}

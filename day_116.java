@@ -35,3 +35,37 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Bag & Boxes -Total Gold Coins;
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] ar=new int[n];
+		for(int i=0;i<n;i++) ar[i]=sc.nextInt();
+		int min=mind(ar[0],0);
+		int s=min;
+		for(int i=1;i<n;i++){
+		    s+=mind(ar[i],min);
+		    int mn=mind(ar[i],min);
+		    if(mn!=0){
+		        min=mn;
+		    }
+		   
+		}
+        System.out.print(s);
+	}
+	static int mind(int a,int b){
+	    int m=-1;
+	    String[] di=Integer.toString(a).split("");
+	    Arrays.sort(di);
+	    for(int i=0;i<di.length;i++){
+	        if(b<=Integer.parseInt(di[i])){
+	            m=Integer.parseInt(di[i]);
+	            break;
+	        }
+	    }
+	    return (m==-1)?0:m;
+	}
+}

@@ -63,3 +63,27 @@ public class Hello {
 
 	}
 }
+#include<stdio.h>
+#include<stdlib.h>
+//next prime number..
+int main()
+{
+    int i,a;
+    scanf("%d",&a);
+    i=a+1;
+    while(isp(i)==0){
+        i++;
+    }
+    printf("%d",i);
+
+}
+int isp(int n){
+    if(n==2||n==3) return 1;
+    if(n%2==0||n%3==0) return 0;
+    for(int i=4;i*i<=n;i++){
+        if(n%i==0){
+            return 0;
+        }
+    }
+    return 1;
+}

@@ -91,33 +91,21 @@ import java.util.*;
 public class Hello {
 
     public static void main(String[] args) {
-		//file Download Cost
+		//File Download Cost
 		Scanner sc=new Scanner(System.in);
-		int a=sc.nextInt();
+		int a=sc.nextInt()*1024;
 		int b=sc.nextInt();
-		long c=(a*1024)/b;
-		if((a*1024%b)>0){
-		    c+=1;
+		int sec=a/b;
+		if(a%b!=0) sec++;
+		if(sec>1000){
+		    System.out.print((sec-1000)*3+1500);
 		}
-		long cost=0;
-		if(c>500){
-		    cost+=500;
-		    c-=500;
-		}
-		else{
-		    System.out.print(c);
-		    return;
-		}
-		if(c>500){
-		    cost+=1000;
-		    c-=500;
+		else if(sec>500){
+		    System.out.print((sec-500)*2+500);
 		}
 		else{
-		    cost=cost+(c*2);
-		    System.out.print(cost);
-		    return;
+		    System.out.print(sec);
 		}
-		System.out.print(cost+(c*3));
 		
 
 	}

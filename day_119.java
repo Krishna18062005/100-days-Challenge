@@ -44,3 +44,22 @@ class Codechef
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Character B follows A
+		Scanner sc=new Scanner(System.in);
+		String ip=sc.next();
+		char a=sc.next().charAt(0);
+		char b=sc.next().charAt(0);
+		String re=a+""+b;
+		int c=0;
+		for(int i=0;i+1<ip.length();i++){
+		    if((ip.charAt(i)+""+ip.charAt(i+1)).equals(re)) c++;
+		}
+		System.out.print(c);
+		
+
+	}
+}

@@ -87,3 +87,38 @@ int isp(int n){
     }
     return 1;
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//file Download Cost
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		long c=(a*1024)/b;
+		if((a*1024%b)>0){
+		    c+=1;
+		}
+		long cost=0;
+		if(c>500){
+		    cost+=500;
+		    c-=500;
+		}
+		else{
+		    System.out.print(c);
+		    return;
+		}
+		if(c>500){
+		    cost+=1000;
+		    c-=500;
+		}
+		else{
+		    cost=cost+(c*2);
+		    System.out.print(cost);
+		    return;
+		}
+		System.out.print(cost+(c*3));
+		
+
+	}
+}

@@ -1,0 +1,1 @@
+// Alternative digit sum

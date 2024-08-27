@@ -19,7 +19,6 @@ public class Hello {
 		        f=!f;
 		        s=!s;
 		    }
-		    
 		}
 		System.ou.print(a+" "+b);//5 9
 

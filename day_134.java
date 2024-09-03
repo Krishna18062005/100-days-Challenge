@@ -28,3 +28,28 @@ public class Solution {
 		return s;
 	}
 }
+class Solution {
+    public int getLucky(String st, int k) {
+        
+        String str="";
+        for(char i:st.toCharArray()){
+            str+=(i-'a'+1);
+        }
+        System.out.println(str);
+        int i=0;
+        while(i<k){
+            str=sum(str);
+            System.out.print(str+" ");
+            i++;
+        }
+        return Integer.parseInt(str);
+    }
+    public static String sum(String s){
+        int su=0;
+        for(char i:s.toCharArray()){
+            su+=i-'0';
+        }
+        return Integer.toString(su);
+
+    }
+}

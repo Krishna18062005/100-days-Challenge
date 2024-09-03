@@ -67,3 +67,17 @@ class Solution {
 // for i  in l:
 //     if(i==0):
 //         print(i,end=" ")
+
+// #Smallest Integer - Greater than X
+// l=list(map(int,input().split()))
+// s=sorted(l)
+// for i in l:
+//     p=0
+//     for j in s:
+//         if(i<j):
+//             print(j,end=" ")
+//             p=1
+//             break
+//     if(p==0):
+//         print(-1,end=" ")
+    

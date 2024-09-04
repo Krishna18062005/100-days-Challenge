@@ -89,3 +89,33 @@ class Codechef
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//N Triangle Pattern 
+		int size=new Scanner(System.in).nextInt();
+		int i=0;
+		while(i++<size){
+		    printPattern(i);
+		}
+
+	}
+	public static void printPattern(int n){
+	    
+	    for(int i=0;i<n*2-1;i++){
+	        if(i<n)
+	        for(int j=i+1;j>0;j--){
+	            System.out.print(j+" ");
+	        }
+	        else{
+	            
+	            int re=n*2-i;
+	            for(int k=re-1;k>0;k--){
+	                System.out.print(k+" ");
+	            }
+	        }
+	        System.out.println("");
+	    }
+	}
+}

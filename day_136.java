@@ -34,3 +34,23 @@ class Solution {
         return ans;
     }
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Sequence - Based on Previous term
+		int st=new Scanner(System.in).nextInt();
+		
+		while(st!=1){
+		    System.out.print(st+" ");
+		    if(st%2==0){
+		        st/=2;
+		    }
+		    else{
+		        st=(st*3)+1;
+		    }
+		}
+		System.out.print(1);
+
+	}
+}

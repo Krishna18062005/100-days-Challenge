@@ -64,3 +64,28 @@ public class Hello {
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Float Sum Concatenation
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] ar=new int[n];
+		for(int i=0;i<n;i++){
+		    ar[i]=sc.nextInt();
+		}
+		double sum=0;
+		for(int i=0;i<n;i++){
+		    if(i%2==1&&ar[i]!=0){
+		        
+		        double q=ar[i]/Math.pow(10,((int)Math.log10(ar[i])+1));
+		        sum+=q;
+		        
+		    }
+		    else if(i%2==0) sum+=ar[i];
+		}
+		System.out.format("%.3f",sum);
+
+	}
+}

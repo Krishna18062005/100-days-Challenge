@@ -48,3 +48,19 @@ class Solution {
 
     }
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Longest Prefix Suffix
+		String str=new Scanner(System.in).next();
+		int ans=-1;
+		for(int i=0;i<str.length();i++){
+		    if(str.endsWith(str.substring(0,i))){
+		        ans=i;
+		    }
+		}
+		System.out.print((ans==0)?-1:ans);
+
+	}
+}

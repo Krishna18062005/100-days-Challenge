@@ -41,3 +41,28 @@ class Solution {
         return ans;
     }
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Matching Word -Replacing?
+		Scanner sc=new Scanner(System.in);
+		String ans=sc.next();
+		String[] str=sc.nextLine().split(" ");
+		for(String s : str){
+		    if(s.length()!=ans.length()){
+		        continue;
+		    }
+		    else{
+		        for(int i=0;i<ans.length();i++){
+		            if(s.charAt(i)!=ans.charAt(i)&&s.charAt(i)!=ans.charAt(i)){
+		                continue;
+		            }
+		        }
+		    }
+		    Systm.out.print(s);
+		    break;
+		}
+
+	}
+}

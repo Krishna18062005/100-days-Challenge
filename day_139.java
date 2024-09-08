@@ -25,3 +25,19 @@ class Solution {
         return ar.substring(0,ar.length()-1);
     }
 }
+class Solution {
+    public String largestNumber(int[] nums) {
+        String[] n=new String[nums.length];
+        int id=0;
+        for(int i:nums){
+            n[id++]=i+"";
+        }
+        Arrays.sort(n,(a,b)->(b+a).compareTo(a+b));
+        String ans="";
+        for(String s:n){
+            ans+=s;
+        }
+        if(ans.charAt(0)=='0') return "0";
+        return ans;
+    }
+}

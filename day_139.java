@@ -41,27 +41,28 @@ class Solution {
         return ans;
     }
 }
+
 import java.util.*;
 public class Hello {
 
     public static void main(String[] args) {
-		//Matching Word -Replacing?
+		//Matching Word - Replace ?
 		Scanner sc=new Scanner(System.in);
-		String ans=sc.next();
+		String s=sc.nextLine();
 		String[] str=sc.nextLine().split(" ");
-		for(String s : str){
-		    if(s.length()!=ans.length()){
-		        continue;
-		    }
+		System.out.println(s);
+		for(String st:str){
+		    if(st.length()!=s.length()) continue;
 		    else{
-		        for(int i=0;i<ans.length();i++){
-		            if(s.charAt(i)!=ans.charAt(i)&&s.charAt(i)!=ans.charAt(i)){
-		                continue;
+		        int i=0;
+		        for(;i<s.length();i++){
+		            if(s.charAt(i)!=st.charAt(i)&&s.charAt(i)!='?') 
+		            break;
 		            }
-		        }
-		    }
-		    Systm.out.print(s);
-		    break;
+		            if(i==s.length()){
+		    System.out.print(st);
+		     break;}
+		}    
 		}
 
 	}

@@ -29,3 +29,38 @@ class Codechef
 
 	}
 }
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Inverted -Factors Pattern
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		ArrayList<Integer> ar=new ArrayList<>();
+		for(int i=1;i<=n;i++){
+		    if(n%i==0)
+		    ar.add(i);
+		}
+		for(int i=0;i<ar.size();i++){
+		    for(int j=0;j<ar.size();j++){
+		        int k=Math.min(i,j);
+		        System.out.print(ar.get(k)+" ");
+		    }
+		    System.out.println();
+		}
+ 
+	}
+}
+
+// Input
+
+// 12
+
+// Output:
+
+// 1 1 1 1 1 1 
+// 1 2 2 2 2 2 
+// 1 2 3 3 3 3 
+// 1 2 3 4 4 4 
+// 1 2 3 4 6 6 
+// 1 2 3 4 6 12 

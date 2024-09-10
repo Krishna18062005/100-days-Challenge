@@ -38,3 +38,26 @@ public class Hello {
 // Output:
 
 // 229 333 
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Video Game Movement
+		int f=0,s=0;
+		String move=new Scanner(System.in).next();
+		for(int i=0;i<move.length();i++){
+		    char ch=move.charAt(i);
+		    if(ch=='U'||ch=='u') f+=1;
+		    else if(ch=='D'||ch=='d') f-=1;
+		    else if(ch=='r'||ch=='R') s+=1;
+		    else s-=1;
+		    
+		}
+		System.out.print((f==0&&s==0)?"YES":"NO");
+
+	}
+}
+//input
+//uprl
+//output
+//YES

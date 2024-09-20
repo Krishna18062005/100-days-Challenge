@@ -30,3 +30,10 @@
 // }System.out.print((int)a.charAt(i)+" ");
 }
 // 
+
+
+// // insertion sort;
+// select a number and insert it in respective Index..
+
+// Compare with the key Element 
+//

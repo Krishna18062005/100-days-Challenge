@@ -1,21 +1,20 @@
 import java.util.*;
 
-class Eucledian {
-    public static void main(String[]args){
-        Scanner sc=new Scanner(System.in);
-        int num1=sc.nextInt();
-        int num2=sc.nextInt();
-        if(num1<num2){
-            int temp=num1;
-            num1=num2;
-            num2=temp;
-        }
-        while(num2!=0){
-            int rem=num1%num2;
-            num1=num2;
-            num2=rem;
-        }
-        System.out.print(num1);
-        
-    }
-} 
+public class BitWise {
+    public static void main(String[] args) {
+      //int a=new Scanner(System.in).nextInt();
+    //   int a=5;
+    //   if((a&1)==1)
+    //   System.out.println("odd");
+    //   else{
+    //     System.out.println("Even");
+    //   }
+      int sumOfDigit=0;
+      int n=12345;
+      while(n>0){
+        sumOfDigit+=(n%10);
+        n/=10;
+      }
+      System.out.print(sumOfDigit);
+  }
+}
